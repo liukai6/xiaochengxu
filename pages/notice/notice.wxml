@@ -1,0 +1,6 @@
+<!--pages/notice/notice.wxml-->
+
+<view class="container">
+<image class='photo' src="/pages/img/a.png"></image>
+</view>
+

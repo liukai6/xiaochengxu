@@ -1,0 +1,4 @@
+<!--pages/home/home.wxml-->
+<text>
+<image class='photo' src="/pages/img/a.png"></image>
+</text>
