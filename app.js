@@ -36,12 +36,12 @@ App({
               console.log('iv')
             
               console.log('Red')
-              setTimeout(function(){
+           
                 wx.redirectTo({
                   url: '/pages/home/home',
                 })
 
-              },200)
+             
           
             }
           })
@@ -52,14 +52,13 @@ App({
        * 请在开发者工具中选择「自定义编译」，场景选择 1044
        */
     }else{
-      
-      wx.redirectTo({
-        url: '/pages/home/home',
-      })
-      
+      //不是在群里打开的,需要跳转到首页
+
+        wx.redirectTo({
+          url: '/pages/index/index',
+        })
+ 
     }
   
   },
-
-  
 })
