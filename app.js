@@ -62,7 +62,7 @@ App({
       //不是在群里打开的,需要跳转到首页
 
       wx.redirectTo({
-        url: '/pages/index/index',
+        url: '/pages/notice/notice',
       })
  
     }

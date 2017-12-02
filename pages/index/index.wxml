@@ -1,6 +1,4 @@
 <!--pages/home/home.wxml-->
-<view>
-<text>
-点击分享到微信群中查看
-</text>
+<view class="container">
+<image class='photo' mode='aspectFill' src="/img/a.png"></image>
 </view>

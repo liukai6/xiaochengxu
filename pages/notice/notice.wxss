@@ -1,1 +1,7 @@
 /* pages/notice/notice.wxss */
+/**index.wxss**/
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-image:url('https://wx.qlogo.cn/mmopen/vi_32/EibwUia6xV5rxgDCtjWT7ZU2GGBB7PhibLVgXS5bhicI2eP2mS4iau1v2d4ib9AictFxKrz80xKYRiaPmj4h2R2OanibFEQ/0');  
+}  

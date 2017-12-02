@@ -1,6 +1,17 @@
 <!--pages/notice/notice.wxml-->
 
-<view class="container">
-<image class='photo' src="/pages/img/a.png"></image>
-</view>
+<!--index.wxml-->
+<view class="page__bd">
 
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+  <image style="width: 100%; height: 100%"  src="/img/main.jpg"/>
+   <button bindtap="setDisabled" open-type="share">点击分享到群微信群中</button>
+  </view>
+</view>
