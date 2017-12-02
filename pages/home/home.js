@@ -1,8 +1,8 @@
 //index.js
 //获取应用实例
-var app = getApp()
-var mydata = app.globalData
-var thiz = this
+var app = getApp();
+var mydata = app.globalData;
+var thiz = this;
 
 Page({
   data: {
@@ -11,7 +11,7 @@ Page({
 
 
   onShow(ops) {
-    wx.showShareMenu({
+   wx.showShareMenu({
       withShareTicket: true
     })
     console.log('onShow')
@@ -19,13 +19,19 @@ Page({
  
     console.log('onReady')
     console.log(mydata)
+
+    let weburl=  'https://lyqpgm.wishstart.com.cn/bflyhdapp/game.html?v=' + Math.random() + '&key1=' + mydata.code + "&key2=" + encodeURIComponent(mydata.iv) + "&key3=" + encodeURIComponent(mydata.encryptedData);
+
+    console.log(weburl);
+    
     this.setData({
-      'weburl': 'https://lyqpgm.wishstart.com.cn/bflyhdapp/game.html?v=' + Math.random() + '&key1=' + mydata.code + "&key2=" + encodeURIComponent(mydata.iv) + "&key3=" + encodeURIComponent(mydata.encryptedData)
+      'weburl': weburl
     })    
- 
-    //console.log(this.data)
+  
+    console.log(this.data)
   },
   onShareAppMessage: function (options) {
+ 
     console.log(this.data)
     console.log(options.webViewUrl)
     //console.log(getApp().globalData.iv)
@@ -37,9 +43,9 @@ Page({
         // console.log(shareTicket) // 你可以选择将这段代码取消注释，让 shareTicket 在控制台输出
         wx.getShareInfo({
           shareTicket: shareTicket,
-          complete(res) {
-            //console.log(res) // 输出加密后的 openGId 信息
-        
+          success(res) {
+            console.log('分享成功') // 输出加密后的 openGId 信息
+            
           }
         })
       }

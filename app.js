@@ -22,6 +22,11 @@ App({
           console.log('code')
        
         }
+      },
+      fail() {
+        wx.redirectTo({
+          url: '/pages/notice/notice',
+        })
       }
     })
     if (ops.scene == 1044) { // 当用户通过带 shareTicket 的分享卡片进入小程序时，小程序才开始读取群聊信息
@@ -29,20 +34,22 @@ App({
       console.log('1044')
            wx.getShareInfo({
             shareTicket: ops.shareTicket,
-            complete(res) {
+            success(res) {
               //console.log(res) // 输出加密后的当前群聊的 openGId
+              console.log('iv')
               thiz.globalData.iv = res.iv;
               thiz.globalData.encryptedData = res.encryptedData;
-              console.log('iv')
+
+              wx.redirectTo({
+                url: '/pages/home/home',
+              })
             
               console.log('Red')
-           
-                wx.redirectTo({
-                  url: '/pages/home/home',
-                })
-
-             
-          
+            },
+            fail:function(){
+              wx.redirectTo({
+                url: '/pages/notice/notice',
+              })
             }
           })
  
@@ -54,9 +61,9 @@ App({
     }else{
       //不是在群里打开的,需要跳转到首页
 
-        wx.redirectTo({
-          url: '/pages/index/index',
-        })
+      wx.redirectTo({
+        url: '/pages/index/index',
+      })
  
     }
   
