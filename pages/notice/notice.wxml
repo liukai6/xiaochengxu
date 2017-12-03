@@ -12,6 +12,6 @@
   </view>
 
   <view class='share'>
-   <button  bindtap="setDisabled" open-type="share">转发到微信群,查看我的排名</button>
+   <button   open-type="share">转发到微信群,查看我的排名</button>
   </view>
 </view>
