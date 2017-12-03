@@ -1,7 +1,64 @@
 /* pages/notice/notice.wxss */
 /**index.wxss**/
 page {  
-  display: block;  
-  min-height: 100%;  
-  background-image:url('https://wx.qlogo.cn/mmopen/vi_32/EibwUia6xV5rxgDCtjWT7ZU2GGBB7PhibLVgXS5bhicI2eP2mS4iau1v2d4ib9AictFxKrz80xKYRiaPmj4h2R2OanibFEQ/0');  
+  min-height: all;
+  position:relative;
+  
+
+  background-image:url('http://p0d5ombx1.bkt.clouddn.com/main.jpg');  
+  -webkit-background-size: auto;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100% 100%;
 }  
+button {
+
+justify-content:center;
+position: fixed;
+display:block;
+padding-left:3vh;
+padding-right:3vh;
+box-sizing:border-box;
+font-size:40rpx;
+text-align:center;
+text-decoration:none;
+line-height:2.0;
+border-radius:5px;
+border: 1px solid #333333;
+-webkit-tap-highlight-color:transparent;
+overflow:hidden;
+color:#ffffff;
+background-color:#ffbf00;
+bottom: 70rpx;
+
+}
+
+.share{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content:center;
+   margin-bottom: 60rpx;
+}
+
+
+.userinfo {  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+}  
+  
+.userinfo-avatar {  
+  width: 128rpx;  
+  height: 128rpx;  
+  margin: 20rpx;  
+  border-radius: 50%;  
+}  
+  
+.userinfo-nickname {  
+  color: #aaa;  
+}  
+  
+.usermotto {  
+  margin-top: 200px;  
+} 
