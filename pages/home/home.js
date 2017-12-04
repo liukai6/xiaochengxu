@@ -38,6 +38,7 @@ Page({
     return {
       title: '本群排行榜在此，第一竟然是？',
       path: '/pages/home/home',
+      imageUrl:'http://p0d5ombx1.bkt.clouddn.com/main1.jpg',
       success(res) {
         var shareTicket = res.shareTickets[0] // 获取 shareTicket
         // console.log(shareTicket) // 你可以选择将这段代码取消注释，让 shareTicket 在控制台输出

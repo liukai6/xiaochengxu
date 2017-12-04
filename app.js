@@ -24,9 +24,11 @@ App({
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }
-              wx.redirectTo({
-                url: '/pages/notice/notice',
-              })
+              setTimeout(function () {
+                wx.redirectTo({
+                  url: '/pages/notice/notice',
+                })
+              }, 300)
             }
           })
         }else{
@@ -41,12 +43,11 @@ App({
                 this.userInfoReadyCallback(res)
              
               }
-              setTimeout(function(){
+              setTimeout(function () {
                 wx.redirectTo({
                   url: '/pages/notice/notice',
                 })
-              },200)
-              
+              }, 300)
             }
           })
         }
@@ -113,10 +114,11 @@ App({
     }else{
       //不是在群里打开的,需要跳转到首页
 
-      wx.redirectTo({
-        url: '/pages/notice/notice',
-      })
- 
+      setTimeout(function () {
+        wx.redirectTo({
+          url: '/pages/notice/notice',
+        })
+      }, 400)
     }
   
   },

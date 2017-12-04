@@ -5,7 +5,7 @@ page {
   position:relative;
   
 
-  background-image:url('http://p0d5ombx1.bkt.clouddn.com/main.jpg');  
+  background-image:url('http://p0d5ombx1.bkt.clouddn.com/main1.jpg');  
   -webkit-background-size: auto;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -28,7 +28,7 @@ border: 1px solid #333333;
 -webkit-tap-highlight-color:transparent;
 overflow:hidden;
 color:#ffffff;
-background-color:#ffbf00;
+background-color:#FF9C00;
 bottom: 90rpx;
 
 }
@@ -55,11 +55,11 @@ bottom: 90rpx;
 }  
   
 .userinfo-avatar {  
-  width: 200rpx;  
-  height: 210rpx;
-  border: 5px solid #ff0000;  
+  width: 250rpx;  
+  height: 280rpx;
+  border: 5px solid #D50840;  
   
-  margin: 20rpx;  
+  margin: 15rpx;  
   border-radius: 10px; 
   justify-content:center; 
 }  
