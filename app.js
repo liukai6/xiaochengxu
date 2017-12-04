@@ -28,7 +28,7 @@ App({
                 wx.redirectTo({
                   url: '/pages/notice/notice',
                 })
-              }, 300)
+              },300)
             }
           })
         }else{
@@ -44,11 +44,7 @@ App({
              
               }
 
-              setTimeout(function () {
-                wx.redirectTo({
-                  url: '/pages/notice/notice',
-                })
-              }, 300)
+       
 
             }
           })
@@ -78,11 +74,7 @@ App({
        
         }
       },
-      fail() {
-        wx.redirectTo({
-          url: '/pages/notice/notice',
-        })
-      }
+     
     })
     if (ops.scene == 1044) { // 当用户通过带 shareTicket 的分享卡片进入小程序时，小程序才开始读取群聊信息
       // console.log(ops.shareTicket)  你可以取消这段代码的注释，将 shareTicket 输出至控制台
@@ -101,11 +93,7 @@ App({
             
               console.log('Red')
             },
-            fail:function(){
-              wx.redirectTo({
-                url: '/pages/notice/notice',
-              })
-            }
+          
           })
  
 
