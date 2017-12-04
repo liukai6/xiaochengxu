@@ -43,11 +43,13 @@ App({
                 this.userInfoReadyCallback(res)
              
               }
+
               setTimeout(function () {
                 wx.redirectTo({
                   url: '/pages/notice/notice',
                 })
               }, 300)
+
             }
           })
         }
@@ -118,7 +120,7 @@ App({
         wx.redirectTo({
           url: '/pages/notice/notice',
         })
-      }, 400)
+      }, 300)
     }
   
   },
