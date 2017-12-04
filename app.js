@@ -86,10 +86,13 @@ App({
               console.log('iv')
               thiz.globalData.iv = res.iv;
               thiz.globalData.encryptedData = res.encryptedData;
-
-              wx.redirectTo({
-                url: '/pages/home/home',
-              })
+              setTimeout(function(){
+                wx.redirectTo({
+                  url: '/pages/home/home',
+                })
+              },300)
+             
+            
             
               console.log('Red')
             },

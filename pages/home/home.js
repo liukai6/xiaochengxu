@@ -37,7 +37,7 @@ Page({
     //console.log(getApp().globalData.iv)
     return {
       title: '本群排行榜在此，第一竟然是？',
-      path: '/pages/home/home',
+      path: '/pages/index/index',
       imageUrl:'http://p0d5ombx1.bkt.clouddn.com/main1.jpg',
       success(res) {
         var shareTicket = res.shareTickets[0] // 获取 shareTicket
