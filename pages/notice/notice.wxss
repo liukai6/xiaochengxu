@@ -5,7 +5,7 @@ page {
   position:relative;
   
 
-  background-image:url('http://p0d5ombx1.bkt.clouddn.com/main1.jpg');  
+  background-image:url('http://lyqpgm.oss-cn-beijing.aliyuncs.com/bflyhdapp/main.jpg');  
   -webkit-background-size: auto;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -16,8 +16,7 @@ button {
 justify-content:center;
 position: fixed;
 display:block;
-padding-left:3vh;
-padding-right:3vh;
+
 box-sizing:border-box;
 font-size:40rpx;
 text-align:center;

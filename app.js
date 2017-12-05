@@ -10,43 +10,19 @@ App({
     // var logs = wx.getStorageSync('logs') || []  
     // logs.unshift(Date.now())  
     // wx.setStorageSync('logs', logs)
-    wx.getSetting({
-      success: res => {
-        if (!res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-              console.log('已经搜全')
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-         
-            }
-          })
-        }else{
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-              console.log('没有搜全')
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-             
-              }
-            
-       
-
-            }
-          })
+  
+      
+      wx.getUserInfo({
+        success: res => {
+          // 可以将 res 发送给后台解码出 unionId
+          this.globalData.userInfo = res.userInfo
+          console.log('已经搜全')
+          // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+          // 所以此处加入 callback 以防止这种情况
+      
         }
-      }
-    })
+      })
+
   },  
  
 
@@ -70,6 +46,7 @@ App({
        
         }
       },
+      //失败跳转到提示首页
       fail: function () {
         wx.redirectTo({
           url: '/pages/notice/notice',
@@ -92,11 +69,9 @@ App({
                   url: '/pages/home/home',
                 })
               },300)
-             
-            
-            
               console.log('Red')
             },
+            //失败跳转到提示首页
             fail:function(){
               wx.redirectTo({
                 url: '/pages/notice/notice',
@@ -111,12 +86,14 @@ App({
        */
     }else{
       //不是在群里打开的,需要跳转到首页
-
+      
       setTimeout(function () {
+        
         wx.redirectTo({
           url: '/pages/notice/notice',
         })
       }, 300)
+      console.log('跳notice')
     }
   
   },
