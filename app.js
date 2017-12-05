@@ -24,11 +24,7 @@ App({
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
               }
-              setTimeout(function () {
-                wx.redirectTo({
-                  url: '/pages/notice/notice',
-                })
-              },300)
+         
             }
           })
         }else{
@@ -43,7 +39,7 @@ App({
                 this.userInfoReadyCallback(res)
              
               }
-
+            
        
 
             }
@@ -74,6 +70,11 @@ App({
        
         }
       },
+      fail: function () {
+        wx.redirectTo({
+          url: '/pages/notice/notice',
+        })
+      }
      
     })
     if (ops.scene == 1044) { // 当用户通过带 shareTicket 的分享卡片进入小程序时，小程序才开始读取群聊信息
@@ -96,7 +97,11 @@ App({
             
               console.log('Red')
             },
-          
+            fail:function(){
+              wx.redirectTo({
+                url: '/pages/notice/notice',
+              })
+            }
           })
  
 
