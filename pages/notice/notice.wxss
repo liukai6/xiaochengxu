@@ -1,74 +1,72 @@
 /* pages/notice/notice.wxss */
 /**index.wxss**/
 page {  
-  min-height: all;
-  position:relative;
+ overflow:hidden;
+  position:fixed;
   
 
   background-image:url('http://lyqpgm.oss-cn-beijing.aliyuncs.com/bflyhdapp/main.jpg');  
-  -webkit-background-size: auto;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+
+  margin: 0px;
+  
   background-size: 100% 100%;
 }  
 button {
 
-justify-content:center;
+right: 70rpx;
+left: 70rpx;   
+flex-direction:row;
 position: fixed;
-display:block;
-
+display:flex;
 box-sizing:border-box;
 font-size:40rpx;
-text-align:center;
-text-decoration:none;
-line-height:2.0;
+
+justify-content:center;
 border-radius:5px;
 border: 1px solid #333333;
--webkit-tap-highlight-color:transparent;
-overflow:hidden;
 color:#ffffff;
 background-color:#FF9C00;
 bottom: 90rpx;
 
 }
 
+
 .share{
-   width: 100%;
-   height: 100%;
-   display: flex;
-   justify-content:center;
-   margin-bottom: 60rpx;
+  
+  text-align:center;
+  position: fixed;
+  display:flex;
+  width: 100%;
+  justify-content:center;
+  
 }
 
 
 .userinfo { 
-    width: 100%;
-   height: 100%; 
-  display: flex;  
+  
+  display:flex;
+  width: 100%;
+  height: 100%; 
   flex-direction: column;  
   align-items: center; 
   top: 25rpx;
- 
   position: fixed;
   justify-content:center;
 }  
   
-.userinfo-avatar {  
-
-  width: 250rpx;  
+.userinfo-avatar { 
+  align-items: center; 
+  display:flex;
+  width: 280rpx;  
   height: 280rpx;
   border: 5px solid #D50840;  
-
-  
   margin: 15rpx;  
   border-radius: 10px; 
   justify-content:center; 
 }  
   
 .userinfo-nickname {  
+  align-items: center;
   color: #aaa;  
 }  
   
-.usermotto {  
-  margin-top: 200px;  
-} 

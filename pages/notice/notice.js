@@ -2,11 +2,10 @@
 const app = getApp()
 
 Page({
-  
   data: {
     userInfo: { 
-     
-      
+      //avatarUrl:'/img/timg.jpg',
+      nickName:"马上发财" 
     },
 
   },
@@ -15,7 +14,8 @@ Page({
 
 
   onLoad: function () {
-    var thiz = this;
+    var thiz =this;
+   
     wx.showShareMenu({
       withShareTicket: true //要求小程序返回分享目标信息
     })
@@ -23,13 +23,14 @@ Page({
   console.log('onload')
   
     console.log('1')
-    thiz.setData({
-      userInfo: app.globalData.userInfo,
-    })
+    if (app.globalData.userInfo){
+      thiz.setData({
+        userInfo: app.globalData.userInfo,
 
-  },
-  onPullDownRefresh: function () {
-    wx.stopPullDownRefresh()
+      })
+    }
+ 
+
   },
 
   // 其他的页面函数、生命周期函数等
