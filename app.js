@@ -1,7 +1,7 @@
 //app.js
 App({
   globalData: {
-    
+    i:1
   },
   //获取头像
   onLaunch: function () {
@@ -10,7 +10,7 @@ App({
     // var logs = wx.getStorageSync('logs') || []  
     // logs.unshift(Date.now())  
     // wx.setStorageSync('logs', logs)
-  
+    //首次授权同意后跳转获取头像
     wx.getSetting({
       success(res) {
         if (!res.authSetting['scope.userInfo']) {
@@ -20,13 +20,9 @@ App({
             success() {
               console.log('buth')
               // 用户已经同意小程序使用用户信息，后续调用 wx.userinfo接口不会弹窗询问
-
-              setTimeout(function () {
-                
-                wx.redirectTo({
-                  url: '/pages/notice/notice',
-                })
-              }, 300)
+               wx.redirectTo({
+                 url: '/pages/notice/notice',
+              })
             }
           })
         }
@@ -37,10 +33,9 @@ App({
         success: res => {
           // 可以将 res 发送给后台解码出 unionId
           this.globalData.userInfo = res.userInfo
-          console.log('已经搜全')
-          // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-          // 所以此处加入 callback 以防止这种情况
-         
+          console.log('已经搜全') 
+
+        
         }
       })
 
@@ -108,8 +103,7 @@ App({
     }else{
       //不是在群里打开的,需要跳转到首页
       
-      setTimeout(function () {
-        
+      setTimeout(function () {   
         wx.redirectTo({
           url: '/pages/notice/notice',
         })
