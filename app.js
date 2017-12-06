@@ -11,7 +11,28 @@ App({
     // logs.unshift(Date.now())  
     // wx.setStorageSync('logs', logs)
   
-      
+    wx.getSetting({
+      success(res) {
+        if (!res.authSetting['scope.userInfo']) {
+          console.log('auth')
+          wx.authorize({
+            scope: 'scope.userInfo',
+            success() {
+              console.log('buth')
+              // 用户已经同意小程序使用用户信息，后续调用 wx.userinfo接口不会弹窗询问
+
+              setTimeout(function () {
+                
+                wx.redirectTo({
+                  url: '/pages/notice/notice',
+                })
+              }, 300)
+            }
+          })
+        }
+      }
+    })
+
       wx.getUserInfo({
         success: res => {
           // 可以将 res 发送给后台解码出 unionId
@@ -19,7 +40,7 @@ App({
           console.log('已经搜全')
           // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
           // 所以此处加入 callback 以防止这种情况
-      
+         
         }
       })
 
